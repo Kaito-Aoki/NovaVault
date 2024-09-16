@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Gujarat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/gujratstyle.css">
+    <link rel="stylesheet" href="Styles/profilemodal.css">
+    <script src="Scripts/profilemodal.js"></script>
+
+</head>
+<body>
+    <header id="topbar">
+        <div class="logo">
+            <h1><i class="fas fa-map-marked-alt"></i> Explore Gujarat</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="#" class="home-button"><i class="fas fa-home"></i></a>
+    </header>
+
+    <div class="main-container">
+        <nav id="side-menu">
+            <!-- User profile section -->
+            <div class="user-profile">
+                <img src="Images/dr.stone.jpg" alt="User Profile Picture" class="profile-pic">
+                <p class="user-name">Kaito Aoki</p>
+            </div>
+            
+            <!-- Menu options -->
+            <a href="#" class="nav-button" data-section="overview"><i class="fas fa-info-circle"></i> Overview</a>
+            <a href="#" class="nav-button" data-section="places"><i class="fas fa-landmark"></i> Places</a>
+            <a href="#" class="nav-button" data-section="cuisines"><i class="fas fa-utensils"></i> Cuisines</a>
+            <a href="#" class="nav-button" data-section="events"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="#" class="nav-button" data-section="hotels"><i class="fas fa-hotel"></i> Hotel Booking</a>
+
+            <!-- Profile link at the bottom -->
+            <a href="userauth.html" class="nav-button user-profile-link"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+
+        <main id="content-area">
+            <section id="overview-section" class="section active-section">
+                <h2><i class="fas fa-info-circle"></i> Overview of Gujarat</h2>
+                <p>Gujarat, a state on the western coast of India, is known for its diverse landscapes, rich history, and vibrant culture. From the vast salt desert of Kutch to the lush forests of the Gir, Gujarat offers a variety of experiences for travelers.</p>
+            </section>
+
+            <section id="places-section" class="section hidden-section">
+                <h2><i class="fas fa-landmark"></i> Places to Visit (<span id="places-count">0</span>)</h2>
+                <div class="filters">
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="Famous">Famous</option>
+                        <option value="Underrated">Underrated</option>
+                    </select>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Monument">Monument</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Religious">Religious</option>
+                    </select>
+                </div>
+                <div id="places-container" class="card-container"></div>
+            </section>
+
+            <section id="cuisines-section" class="section hidden-section">
+                <h2><i class="fas fa-utensils"></i> Cuisines of Gujarat (<span id="cuisines-count">0</span>)</h2>
+                <div id="cuisines-container" class="card-container"></div>
+            </section>
+
+            <section id="events-section" class="section hidden-section">
+                <h2><i class="fas fa-calendar-alt"></i> Events in Gujarat</h2>
+                <div id="events-container" class="card-container"></div>
+            </section>
+
+            <section id="hotels-section" class="section hidden-section">
+                <h2><i class="fas fa-calendar-alt"></i> Events in Gujarat (<span id="events-count">0</span>)</h2>
+                <p>Gujarat offers a wide range of accommodation options, from luxury hotels to traditional homestays. Popular areas for tourists include Ahmedabad, Vadodara, and the Gir Forest region.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="Scripts/gujratscript.js"></script>
+</body>
+</html>
